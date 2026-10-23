@@ -1,0 +1,1161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>online banking web page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+      }
+      body {
+        background: #0b1220;
+        color: white;
+      }
+      .logo img {
+        height: 80px;
+        width: 80px;
+        border: solid;
+        border-color: black;
+        border-radius: 50%;
+        margin-right: 120px;
+      }
+      header {
+        position: fixed;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        background: #000;
+        width: 100%;
+      
+      }
+      .menu {
+        color: whitesmoke;
+        font-size: 21px;
+        padding-top: 10px;
+        margin-right: 25px;
+        padding-bottom: 10px;
+        padding-left: 11px;
+        padding-right: 11px;
+        margin-bottom: 13px;
+        border-color: #000;
+      }
+      .menu a:hover{
+        color:#38bdf8;
+      }
+      .menu i {
+        color: #38bdf8;
+        font-size: 20px;
+      }
+      a {
+        color: whitesmoke;
+        text-decoration-line: none;
+      }
+
+      #login {
+        margin-left: 45px;
+      }
+      .section_1 {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: radial-gradient(circle at top, #0b1329, #0b1220);
+      }
+      .section_1_text {
+        text-align: justify;
+        font-size: 19px;
+        padding-left: 30px;
+        padding-right: 60px;
+      }
+      .welcome {
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 45px;
+        margin-bottom: 40px;
+      }
+    
+      .section_1_image img {
+        height: 500px;
+        width: 500px;
+        margin-right: 30px;
+        border: solid;
+        border-color: #0b1329;
+        border-radius: 8px;
+      }
+      .text1 {
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+      .open-account {
+        display: inline-block;
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 12px 22px;
+        background: #38bdf8;
+        color: black;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration-line: none;
+      }
+      .open-account:hover{
+      background-color: #2563eb;
+      cursor: pointer;
+      border-radius: 45px;
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 0.5px 10px #000;
+      }
+      .learn-more {
+        margin-top: 20px;
+        padding: 12px 22px;
+        background: #38bdf8;
+        color: black;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration-line: none;
+      }
+      .learn-more:hover{
+      background-color: #2563eb;
+      cursor: pointer;
+      border-radius: 45px;
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 0.5px 10px #000;
+      }
+      .section_2 {
+        display: flex;
+        background: radial-gradient(circle at top, #0b1329, #0b1220);
+        margin-top: 20px;
+        margin-bottom: 45px;
+      }
+      .section_2_text {
+        text-align: justify;
+        font-size: 19px;
+        padding-left: 30px;
+        padding-right: 60px;
+        margin-right: 10px;
+        margin-left: auto;
+        padding-top: 60px;
+      }
+      .about {
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+      .section_3 {
+        display: flex;
+        background: radial-gradient(circle at top, #0b1329, #0b1220);
+        margin-top: 20px;
+        padding-right: 80px;
+        padding-top: 60px;
+      }
+      .costomer{
+         margin-top: 10px;
+         margin-right: 20px;
+         margin-bottom: 15px;
+        padding: 15px 15px;
+        background: #12445a;
+        border-radius: 18px;
+        
+      }
+      .costomer a,i{
+        color: #38bdf8;
+        margin-right: 3px;
+        font-size: 27px;
+      }
+      .text-image{
+        display: flex;
+        justify-content: space-between; 
+      }
+      
+      .text-image{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: radial-gradient(circle at top, #0b1329, #0b1220) 
+      
+      }
+      .service{
+        text-align: justify;
+        font-size: 19px;
+        padding-left: 30px;
+        padding-right: 60px;
+      }
+      .image_2 img{
+        height: 350px;
+        width: 350px;
+        margin-right: 30px;
+        border: solid;
+        border-color: #0b1329;
+        border-radius: 20px;
+      }
+      .service h4{
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 15px;
+        margin-bottom: 20px;
+        margin-bottom: 25px;
+      }
+      .service h1{
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 45px;
+        margin-bottom: 30px;
+        margin-top: 50px;
+      }
+      .provide{
+        display: flex;
+        margin-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: space-between;
+      }
+      .for-user{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        padding: 15px 15px;
+        background: #12445a;
+        border-radius: 18px;
+        font-size: 19px;
+      }
+      .for-user a,i{
+        color: rgb(0, 255, 255);
+        font-size: 27px;
+      }
+      .account{
+        display: flex;
+        margin-top: 50px;
+      }
+      .account_text{
+        padding-top: 170px;
+        padding-left: 40px;
+        padding-right: 60px;
+        font-size: 20px;
+      }
+
+      .account_text h1{
+       padding-bottom: 35px;
+       color: aqua;
+      }
+      .type-of-account{
+        display: flex;
+      }
+      .types-account{
+        border-radius: 8px;
+        margin-top: 10px;
+         margin-right: 20px;
+         margin-bottom: 15px;
+        padding: 15px 15px;
+        background: #0c3f55;
+        font-size: 19px;
+        margin-left: 20px;
+      }
+      .types-account a, i{
+        color: aqua;
+        font-size: 27px;
+      }
+      .types-account h4{
+        border: solid;
+        border-radius: 10px;
+        border-color: #12445a;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgb(39, 160, 160);
+        font-size: 20px;
+      }
+      .types-account h4:hover{
+      background-color: #2563eb;
+      cursor: pointer;
+      border-radius: 45px;
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 0.5px 10px #0b1220;
+      }
+      .loan{
+        display: flex;
+        margin-top: 20px;
+      }
+      .loan_text{
+        padding-top: 105px;
+        padding-left: 25px;
+        font-size: 19px;
+        padding-right: 20px;
+      }
+      .loan_text h1{
+        margin-bottom: 20px;
+        font-size: 45px;
+        color:aqua ;
+      }
+      .loan_types{
+        display: flex;
+        margin-top: 15px;
+      }
+      .types_of_loans{
+        border-radius: 8px;
+        margin-top: 10px;
+         margin-right: 20px;
+         margin-bottom: 15px;
+        padding: 15px 15px;
+        background: #0c3f55;
+        font-size: 19px;
+        margin-left: 20px;
+      }
+      .types_of_loans a,i{
+        color: aqua;
+        font-size: 27px;
+      }
+      .solution{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 40px;
+        color:aqua;
+      }
+      .types_of_loans h4{
+         border: solid;
+        border-radius: 10px;
+        border-color: #12445a;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgb(39, 160, 160);
+        font-size: 20px;
+      }
+      .types_of_loans h4:hover{
+       background-color: #2563eb;
+      cursor: pointer;
+      border-radius: 45px;
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 0.5px 10px #0b1220; 
+      }
+
+      .contacts{
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 80px;
+      
+      }
+      .contacts_text{
+        padding-left: 15px;
+        padding-right:15px ;
+        padding-top: 28px;
+        font-size: 19px;
+      
+      }
+      .contacts_text h1{
+        color: aqua;
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      .type-of-contact{
+        display: flex;
+        margin: top 15 px;
+        margin-left: 20px;
+        margin-right: 20px;
+        justify-content: space-between;
+      }
+      .phone{
+        border-radius: 8px;
+        margin-top: 10px;
+         margin-right: 20px;
+         margin-bottom: 15px;
+        padding: 15px 15px;
+        background: #0c3f55;
+        font-size: 19px;
+        margin-left: 20px;
+      }
+      .FAQ{
+        display: flex;
+        margin-top: 40px;
+        justify-content: space-between;
+      }
+      .frequently{
+        padding-top: 50px;
+        padding-left: 35px;
+        font-size: 20px;
+      }
+      .frequently h1{
+        padding-bottom: 25px;
+        color: aqua;
+      }
+       .frequently input{
+        width: 50%;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 70px;
+        background-color: black;
+        border-radius: 13px;
+        color: whitesmoke;
+        margin-left: 300px;
+      }
+      .question{
+        padding-left: 15px;
+      margin-left: 120px;
+      margin-right: 120px;
+        border: solid;
+        border-radius: 15px;
+        border-color: #12445a;
+        justify-content: space-between;
+      }
+      
+      .faq-answer{
+        margin-left: 10px;
+             
+      
+      }
+      .faq-question  {
+        background-color: #131c30;
+        border-radius: 8px;
+        margin-top: 20px ;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+      .touch h3{
+        color: aqua;
+      }
+      
+      
+.login{
+    background-color: #0b1220;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login_text h2{
+    font-size: 40px;
+    color: aqua;
+    margin-bottom: 10px;
+}
+
+.login_text_1 h4{
+    color: whitesmoke;
+    margin-bottom: 25px;
+    font-size: 19px;
+}
+
+.username, .password, .checkbox, .login_text_2, .register{
+    width: 350px;
+    font-size: 17px;
+}
+
+.username label, .password label{
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.username input,.password input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color:#0b1220 ;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.checkbox a{
+    margin-left: auto;
+    text-decoration: none;
+    color: aqua;
+}
+
+.checkbox a:hover{
+    text-decoration: underline;
+}
+
+.login_text_2 h2{
+    background-color: rgb(60, 167, 167);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_text_2 h2:hover{
+      background-color: #2563eb;
+      cursor: pointer;
+      border-radius: 45px;
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 0.5px 10px #000;
+}
+
+.register{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register p{
+    color: whitesmoke;
+}
+
+.register a{
+    color: aqua;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover{
+    text-decoration: underline;
+}
+footer{
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.Quick h2{
+font-size: 25px;
+margin-bottom: 10px;
+color: aqua;
+}
+.Quick h4{
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+.costomer_suport h2{
+font-size: 25px;
+margin-bottom: 10px;
+color: aqua;
+}
+.costomer_suport h4{
+    font-size: 20px;
+  margin-bottom: 20px;
+}
+.end{
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 8s linear infinite;
+        position: relative;
+      }
+      @keyframes marquee{
+        0%{
+          transform: translatex(100%);
+        }
+        100%{
+          transform: translateX(-100%);
+        }
+      }
+
+
+/* RESPONSIVE DESIGN*/
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+
+  header{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo img{
+    margin-right: 20px;
+  }
+
+  .section_1,
+  .section_2,
+  .text-image,
+  .account,
+  .loan,
+  .contacts,
+  .FAQ{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section_1_text,
+  .section_2_text,
+  .service,
+  .account_text,
+  .loan_text,
+  .contacts_text,
+  .frequently{
+    padding: 20px;
+  }
+
+  .section_1_image img,
+  .image_2 img{
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .section_3,
+  .provide,
+  .type-of-account,
+  .loan_types,
+  .type-of-contact{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .question{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .frequently input{
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+  header{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .menu{
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  #login{
+    margin-left: 0;
+  }
+
+  .welcome,
+  .text1,
+  .about,
+  .service h1,
+  .loan_text h1,
+  .account_text h1{
+    font-size: 32px;
+  }
+
+  .section_1_text,
+  .section_2_text,
+  .service,
+  .account_text,
+  .loan_text,
+  .contacts_text,
+  .frequently{
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .costomer,
+  .for-user,
+  .types-account,
+  .types_of_loans,
+  .phone{
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .section_1_image img,
+  .image_2 img{
+    width: 100%;
+  }
+
+  .question{
+    margin: 10px;
+  }
+
+  .faq-question h3{
+    font-size: 16px;
+  }
+
+  .username,
+  .password,
+  .checkbox,
+  .login_text_2,
+  .register{
+    width: 90%;
+  }
+
+  footer h4{
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px){
+
+  .welcome,
+  .text1,
+  .about,
+  .service h1,
+  .loan_text h1,
+  .account_text h1{
+    font-size: 26px;
+  }
+
+  .menu{
+    font-size: 14px;
+  }
+
+  .open-account,
+  .learn-more{
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .solution{
+    font-size: 28px;
+  }
+}
+  
+    </style>
+  </head>
+  <body>
+    <header>
+
+      <div class="logo">
+        <img src="image/logo.jpg" alt="logo" />
+      </div>
+
+      <div class="menu">
+        <a href="#ho"><i class="fa-solid fa-house"></i> Home</a>
+      </div>
+
+      <div class="menu">
+        <a href="#abo"><i class="fa-solid fa-circle-info"></i> About</a>
+      </div>
+
+      <div class="menu">
+        <a href="#ser"><i class="fa-solid fa-briefcase"></i> Services</a>
+      </div>
+
+      <div class="menu">
+        <a href="#acc"><i class="fa-solid fa-user"></i> Accounts</a>
+      </div>
+
+      <div class="menu">
+        <a href="#loa"><i class="fa-solid fa-money-bill"></i> Loans</a>
+      </div>
+
+      <div class="menu">
+        <a href="#con"><i class="fa-solid fa-address-book"></i> Contacts</a>
+      </div>
+
+      <div class="menu">
+        <a href="#fa"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+      </div>
+
+      <div id="login" class="menu">
+        <a href="#lo">Login</a>
+      </div>
+    </header>
+
+    <section id="ho" class="section_1">
+      <div class="section_1_text">
+
+        <h1 class="welcome">Welcome to Ethio Bank</h1>
+        <h1 class="text1">
+          <b>Next-Generation <span>Digital Banking</span></b>
+        </h1>
+        <p>
+          Ethio Bank helps you manage money smarter with instant transfers,
+          secure payments, smart savings tools, and real-time financial control
+          from anywhere in the world.
+        </p>
+        <a class="open-account" href="#">Open Free Account</a>
+        <a class="learn-more" href="#">Learn More</a>
+      </div>
+
+      <div class="section_1_image">
+        <img src="image/photo1.jpg" alt="image1" />
+      </div>
+
+    </section>
+
+    <section id="abo"  class="section_2">
+      <div class="section_2_text">
+        <h1 class="about"><b>About Ethio Bank</b></h1>
+        <p>
+          Ethio Bank was founded with a simple mission: to mmake banking smarter,faster,
+          and more accessiblle for everyone.We combine modern technology with trusted 
+          financial expertise to help you achive your goal.
+        </p>
+      </div>
+
+      <div class="section_3">
+         <div class="costomer">
+          <h3 >  <a href=""><i class="fa-solid fa-users"></i>50m+ <br> Happy Customers </a> </h3>
+         </div>
+
+         <div class="costomer">
+          <h3>  <a href=""><i class="fa-solid fa-building"></i>500+ <br> Branches </a> </h3>
+          </div>
+
+        <div class="costomer">
+          <h3>  <a href=""><i class="fa-solid fa-exchange-alt"></i>100m+ <br> Transactions monthly </a> </h3>
+        </div>
+
+        <div class="costomer">
+          <h3>  <a href=""><i class="fa-solid fa-shield-alt"></i> 99.9% <br>Security and Reliability</i> </a> </h3>
+       </div>
+
+      </div>       
+    </section>
+
+   <section class="section_4">
+    <div class="text-image">
+        <div class="service">
+          <h4 id="ser">What WE Offer </h4>
+          <h1>Our Services</h1>
+          <p>Ethio Bank provvides a wide range of model banking service design to make
+              your life easier,safer,and more convenient</p>
+        </div>
+
+        <div class="image_2">
+            <img src="image/photo_2.jpg" alt="image2" / >
+        </div>
+
+      </div>
+          
+     <div class="provide">
+       <div class="for-user">
+       <a href=""><i class="fa-solid fa-hand-holding-dollar"></i> Money Transfer</a> <br> <br>
+       <p>Send and receive money instantly with our secure and reliable money transfer service.</p>
+       </div>
+       
+       <div class="for-user">
+          <a href=""><i class="fa-solid fa-receipt"></i> bill payment</a> <br> <br>
+          <p>Pay your bills instantly with our convenient bill payment service.</p>
+       </div>
+
+       <div class="for-user">
+         <a href=""><i class="fa-solid fa-mobile-alt"></i> Mobile Banking</a> <br> <br>
+         <p>Access your account and perform transactions on the go with our mobile app.</p>
+       </div>
+
+       <div class="for-user">
+            <a href=""><i class="fa-solid fa-headset"></i> 24/7 Customer Support</a> <br> <br>
+             <p>Get help whenever you need it with our dedicated customer support team.</p>
+       </div>
+         
+         <div class="for-user">
+            <a href=""><i class="fa-solid fa-credit-card"></i> Card Services</a> <br> <br>
+             <p>Manage your debit and credit cards with our comprehensive card services.</p>
+         </div>
+
+      </div>
+    </section>
+
+    <section >
+    <div id="acc" class="account">
+      <div class="account_text">
+        <h1>Accounts Built For Your Life</h1>
+        <p>Choose the right account for your needs and enjoy a seamless
+           banking experience with Etio Bank.
+        </p>
+      </div>
+      <div>
+       <img src="image/photo_3.jpg" alt="image3">
+      </div>
+  </div>
+
+  <div class="type-of-account">
+
+    <div class="types-account">
+      <a href=""><i class="fa-solid fa-money-bill-trend-up"></i> Saving Account </a> <br> <br>
+      <p>Save your money earn competitive rates with flexible access. <br> <br>
+        Earn attractive interest <br>
+        Easy deposits & withdrawals <br>
+        Secure & reliable <br>
+      </p>
+      <br>
+      <h4>Open Current Account</h4>
+    </div>
+
+    <div class="types-account">
+            <a href=""><i class="fa-solid fa-wallet"></i> Current Account </a> <br>  <br>
+            <p>Perfect for daily transactions with unlimited deposits and easy account management. <br> <br>
+            Unlimited transactions <br>
+            Cheque book facility <br>
+            Overdraft available </p> <br>
+            <h4>Open Curent Account</h4>
+    </div>
+
+      <div class="types-account">
+         <a href=""><i class="fa-solid fa-lock"></i> Fixed Deposit </a> <br> <br>
+         <p>Grow your wealth with higher returns on your fixed deposit accounts. <br> <br>
+          Higher interest rates <br>
+          Fiexible tenure options <br>
+          Safe & secure </p> <br>
+          <h4>Open Fixed Deposit</h4>
+
+      </div>
+
+      <div class="types-account">
+       <a href=""><i class="fa-solid fa-graduation-cap"></i> Student Account </a> <br>  <br>
+       <p>Specially designed for students with zero balance and exciting benefits. <br> <br>
+        Zero account balance <br>
+        No maintenance fee <br>
+        Student-friendly featutures</p> <br>
+        <h4>Open Student Account</h4>
+
+      </div>
+  </div>
+    </section>
+
+    <section>
+       <div id="loa" class="loan">
+        <div class="loan_text">
+          <h1>Loans That Power Your Dreams</h1>
+          <p>Ethio Bank offers flexible loan solutions with competitive rates and
+             simple processes to help you acive your goals.</p>
+        </div>
+        <div>
+          <img src="image/photo_4.jpg" alt="image4">
+        </div>
+       </div>
+
+         <h2 class="solution"> <b>Our Loan Solution </b></h2>
+
+      <div class="loan_types">
+        
+        <div class="types_of_loans">
+           <a href=""><i class="fa-solid fa-house"></i> Home Loan </a> <br> <br>
+           <p>make your drean home a reality with easiy financing and flexible repayment option <br> <br>
+             Low interest <br>
+             Long tenure  </p> <br> <br>
+             <h4>Apply Now</h4>
+        </div>
+
+        <div class="types_of_loans">
+           <a href=""><i class="fa-solid fa-car"></i> Auto Loan </a> <br> <br>
+           <p>Drive your dream car with our quick and hassle-free auto loans <br> <br>
+          Quick Approval <br>
+          Easy EMI</p> <br> <br>
+          <h4>Apply Now</h4>
+        </div>
+
+        <div class="types_of_loans">
+         <a href=""><i class="fa-solid fa-graduation-cap"></i> Education Loan </a> <br> <br>
+         <p>Invest in your future with loans designed to support your education <br> <br>
+           Low Rates <br> 
+           Flexible Repayment </p> <br> <br>
+           <h4>Apply Now</h4>
+        </div>
+
+        <div class="types_of_loans">
+         <a href=""><i class="fa-solid fa-user"></i>Personal Loan  </a> <br> <br>
+          <p>Get funds for your personal needs minimal documentation <br> <br>
+           Unsecured <br>
+           Quick Disbursal </p> <br> <br>
+           <h4>Apply Now</h4>
+        </div>
+
+      </div>
+    </section>
+     
+    <section id="con">
+      <div class="contacts">
+        
+        <div class="contacts_text">
+          <h1> We are Here to help You</h1>
+          <p>Have questions,feedback,or need assistance? <br>
+            our team is ready to help you with the best banking experience</p>
+        </div>
+
+        <div>
+          <img src="image/photo_5.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="type-of-contact">
+         <div class="phone">
+         <a href=""><i class="fa-solid fa-phone"></i> Call Us </a> <br> <br>
+         <p>+251911234567 <br><br>
+            Mon-Fri: 8:00 AM - 6:00 PM </p>
+         </div>
+
+         <div class="phone">
+             <a href=""><i class="fa-solid fa-envelope"></i> Email Us </a> <br> <br>
+            <p>info@ethiobank.com.et <br><br>
+               We reply within 24 hours</p>
+         </div>
+
+         <div class="phone">
+          <a href=""><i class="fa-solid fa-location-dot"></i> Visite Us </a> <br> <br>
+          <p>Bolo Road, Addis Abeba <br>
+             Ethiopia</p>
+         </div>
+
+         <div class="phone">
+          <a href=""><i class="fa-solid fa-headset"></i> Customer Support </a> <br> <br>
+          <p>24/7 Live Suport <br>
+          We are here anytime</p>
+         </div>
+
+      </div>
+    </section>
+
+    <section id="fa">
+      <div class="FAQ">
+         <div class="frequently">
+             <h1> <b>Frequently Asked Questions </b></h1>
+             <p>Find answers to the most common questions about Ethio Bank services,accounts,security and more</p>
+         </div>
+
+         <div>
+             <img src="image/photo_6.jpg" alt="image6">
+         </div>
+      </div>
+
+      <div class="frequently"> 
+         <label for="search"></label>
+         <input type="text" placeholder="Search your question...">
+        </div>
+
+<div class="question">
+    
+        <div class="faq-question   touch" >
+            <h3>1. How do I open a bank account with Ethio Bank?  </h3> <br><br>
+          
+               <p class="faq-answer">
+                You can open an account by visiting any of our branches
+                with a valid ID, or easily <br> open a Digital Account through
+                our online banking platform in just a few minutes.
+               </p>
+            
+        </div>
+    
+        <div class="faq-question">
+            <h3>2. How can I reset my online banking password?  </h3>
+            
+        </div>
+    
+        <div class="faq-question">
+            <h3>3. Is my personal information secure with Ethio Bank? </h3>
+            
+        </div>
+    
+        <div class="faq-question">
+            <h3>4. What types of accounts do you offer? </h3>
+           
+        </div>
+    
+        <div class="faq-question">
+            <h3>5. How do I apply for a loan?  </h3>
+            
+        </div>
+    
+        <div class="faq-question">
+            <h3>6. Can I manage my account from my mobile?  </h3>
+            
+        </div>
+    
+        <div class="faq-question">
+            <h3>7. What should I do if I notice unauthorized activity?  </h3>  
+        </div>
+  
+        <div class="faq-question">
+            <h3>8. How can I contact Ethio Bank customer support?  </h3>
+           
+        </div>
+    
+</div>
+    </section>
+
+    <section id="lo" class="login">
+      <div class="login_text">
+        <h2><b>Login to Your Account</b></h2>
+      </div>
+
+      <div class="login_text_1">
+        <h4>Enter Your credentials to continue</h4>
+      </div>
+
+      <div class="username">
+         <label>Username/Email</label> <br>
+        <input type="email" placeholder="Enter your user name or email">
+      </div>
+
+      <div class="password">
+        <label for="password">Password</label> <br>
+        <input type="passwore" placeholder="Enter your password">
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <div class="login_text_2">
+        <h2>Login</h2>
+      </div>
+      <div class="register">
+        <p>Do not have an account?</p> 
+        <a href="#">Register Now</a>
+      </div>
+    </section>
+    <footer>
+
+      <div class="Quick">
+      <h2>Quick link</h2>
+      <h4> <a href="#ho">Home |</a> 
+            <a href="#abo">About |</a>
+             <a href="#ser">services |</a> 
+            <a href="#acc"> Account |</a>
+             <a href="#loa"> Loan |</a>
+       </h4>
+          
+      </div>
+     <div class="costomer_suport">
+      <h2>Costomer Support</h2>
+      <h4> <a href="#con">Contact |</a> 
+            <a href="#lo">Login |</a>
+             <a href="#fa">FAQ |</a> 
+            <span>Privecy & Policy | Terms & Conditions |</span> 
+            
+       </h4>
+     </div>
+     <div>
+     <h4 class="end"> &copy; 2026 Ethio Bank.All Rights Reserved.</h4>
+     </div>
+    </footer>
+
+   
+      
+    
+  </body>
+</html>
